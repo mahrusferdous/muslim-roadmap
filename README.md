@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Muslim Roadmap
 
 Welcome to Muslim Roadmap, a website that provides guidance to people who are looking to learn about Islam or become better Muslims. This website provides authentic references along with the exact citing of the information on special pages and lines.
@@ -53,3 +54,6 @@ Please make sure to follow the code style and best practices used in this projec
 If you have any questions or suggestions about this project, please contact us at info@muslimroadmap.com.
 
 We hope you find Muslim Roadmap useful!
+=======
+# muslim-roadmap
+>>>>>>> main
