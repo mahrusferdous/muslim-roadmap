@@ -67,7 +67,7 @@
 }
 
 .al {
-    background: #111;
+    background: #fafafa;
     border-radius: 5px;
     padding: 0.3rem 0.75rem 0.3rem 0.75rem;
     font-size: 4rem;
@@ -142,7 +142,8 @@
     .footer {
         border-color: #222;
     }
-    .code {
+    .code,
+    .al {
         background: #111;
     }
     /* .logo img {
