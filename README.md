@@ -16,7 +16,7 @@ Next, navigate to the project directory and install the project dependencies:
 
 ```bash
 cd muslim-roadmap
-npm install
+yarn install
 ```
 
 Finally, you can start the development server by running:
