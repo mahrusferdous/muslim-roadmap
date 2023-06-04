@@ -1,12 +1,9 @@
 import type { NextPage } from "next";
-import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
-const Home: NextPage = () => {
+const Guides: NextPage = () => {
     return (
-        <div>
-            {" "}
+        <div className={styles.main}>
             <div className={styles.grid}>
                 <a href="https://quran.com/" className={styles.card} target="_blank" rel="noopener noreferrer">
                     <h2>Quran &rarr;</h2>
@@ -57,4 +54,4 @@ const Home: NextPage = () => {
     );
 };
 
-export default Home;
+export default Guides;
