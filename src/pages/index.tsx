@@ -13,13 +13,14 @@ const Home: NextPage = () => {
             </Head>
 
             <main className={styles.main}>
-                <Image src="/islam.png" alt="Islam" width={500} height={400} />
+                <Image className={styles.img} src="/islam.png" alt="Islam" width={500} height={400} />
 
-                <h1 className={styles.title}>Way to Jannah</h1>
+                <h1 className={styles.title}>
+                    May <code className={styles.al}>Allah</code> Guild You
+                </h1>
 
                 <p className={styles.description}>
-                    <code className={styles.code}>Muslim Roadmap</code> is a roadmap for anyone to learn about Islam. Community effort to collect
-                    resources to learn about Islam.
+                    <code className={styles.code}>Muslim Roadmap</code> is a community effort to collect resources for anyone to learn about Islam.
                 </p>
 
                 <div className={styles.grid}>

@@ -64,6 +64,13 @@
     font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
+.al {
+    background: #111;
+    border-radius: 5px;
+    padding: 0.3rem 0.75rem 0.3rem 0.75rem;
+    font-size: 4rem;
+}
+
 .grid {
     display: flex;
     align-items: center;
@@ -107,10 +114,24 @@
     margin-left: 0.5rem;
 }
 
+.img {
+    margin-bottom: 4rem;
+}
+
 @media (max-width: 600px) {
     .grid {
         width: 100%;
         flex-direction: column;
+    }
+    .title {
+        font-size: 3rem;
+    }
+    .al {
+        font-size: 3rem;
+    }
+    .img {
+        height: 200px;
+        width: 250px;
     }
 }
 
