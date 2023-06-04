@@ -20,7 +20,7 @@ const Home: NextPage = () => {
                 </h1>
 
                 <p className={styles.description}>
-                    <code className={styles.code}>Muslim Roadmap</code> is a community effort to collect resources for anyone to learn about Islam.
+                    <code className={styles.code}>Muslim Roadmap</code> is a community effort in collecting resources for anyone to learn about Islam.
                 </p>
 
                 <div className={styles.grid}>
