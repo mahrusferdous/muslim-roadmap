@@ -1,7 +1,6 @@
-import type { NextPage } from "next";
 import styles from "../styles/Home.module.css";
 
-const Guides: NextPage = () => {
+const Guides = () => {
     return (
         <div className={styles.main}>
             <div className={styles.grid}>
