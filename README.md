@@ -22,7 +22,7 @@ yarn install
 Finally, you can start the development server by running:
 
 ```bash
-npm run dev
+npm start
 ```
 
 Runs the app in the development mode.\
