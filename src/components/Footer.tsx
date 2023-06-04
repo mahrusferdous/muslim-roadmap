@@ -1,8 +1,7 @@
-import type { NextPage } from "next";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
-const Footer: NextPage = () => {
+const Footer = () => {
     return (
         <footer className={styles.footer}>
             <a href="https://muslimroadmap.com" target="_blank" rel="noopener noreferrer">
