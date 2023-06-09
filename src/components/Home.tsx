@@ -8,7 +8,7 @@ const Home = () => {
                 <Image className={styles.img} src="/islam.png" alt="Islam" width={500} height={400} />
 
                 <h1 className={styles.title}>
-                    May <code className={styles.al}>Allah</code> Guild You
+                    May <code className={styles.al}>Allah</code> Guide You
                 </h1>
 
                 <p className={styles.description}>
