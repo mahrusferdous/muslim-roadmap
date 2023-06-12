@@ -4,12 +4,12 @@ import ReactFlow, { ReactFlowProvider, Controls } from "reactflow";
 import "reactflow/dist/style.css";
 
 const initialNodes = [
-    { id: "1", position: { x: 500, y: 0 }, data: { label: "Islam 5 Pillars" } },
-    { id: "2", position: { x: 50, y: 100 }, data: { label: "Shahada" } },
-    { id: "3", position: { x: 250, y: 200 }, data: { label: "Salah" } },
-    { id: "4", position: { x: 450, y: 300 }, data: { label: "Zakat" } },
-    { id: "5", position: { x: 650, y: 400 }, data: { label: "Sawm" } },
-    { id: "6", position: { x: 850, y: 500 }, data: { label: "Hajj" } },
+    { id: "1", position: { x: 500, y: 100 }, data: { label: "Islam 5 Pillars" } },
+    { id: "2", position: { x: 100, y: 200 }, data: { label: "Shahada" } },
+    { id: "3", position: { x: 300, y: 300 }, data: { label: "Salah" } },
+    { id: "4", position: { x: 500, y: 400 }, data: { label: "Zakat" } },
+    { id: "5", position: { x: 700, y: 500 }, data: { label: "Sawm" } },
+    { id: "6", position: { x: 900, y: 600 }, data: { label: "Hajj" } },
 ];
 const initialEdges = [
     { id: "e1-2", source: "1", target: "2" },
@@ -24,7 +24,7 @@ export default function DiagramComponent() {
         <ReactFlowProvider>
             <div
                 style={{
-                    width: "90%",
+                    width: "100%",
                     height: "80vh",
                 }}
             >
