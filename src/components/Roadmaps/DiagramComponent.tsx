@@ -1,5 +1,5 @@
 import React from "react";
-import ReactFlow, { ReactFlowProvider, Controls } from "reactflow";
+import ReactFlow, { ReactFlowProvider, Controls, Background, MiniMap } from "reactflow";
 
 import "reactflow/dist/style.css";
 
@@ -20,6 +20,10 @@ const initialEdges = [
 ];
 
 function DiagramComponent() {
+    const minimapStyle = {
+        height: 120,
+    };
+
     return (
         <ReactFlowProvider>
             <div
@@ -34,7 +38,9 @@ function DiagramComponent() {
                         height: "100%",
                     }}
                 >
+                    <Background color="#aaa" gap={40} />
                     <ReactFlow nodes={initialNodes} edges={initialEdges} />
+                    <MiniMap style={minimapStyle} zoomable pannable />
                     <Controls />
                 </div>
             </div>
