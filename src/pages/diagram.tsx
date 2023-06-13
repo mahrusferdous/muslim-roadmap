@@ -1,17 +1,17 @@
-import type { NextPage } from "next";
-import Guides from "../components/Guides/Guides";
+import React from "react";
+import DiagramComponent from "../components/Roadmaps/DiagramComponent";
 import Navbar from "../components/Head/Navbar";
 import Footer from "../components/Footer/Footer";
 import styles from "../styles/Home.module.css";
 
-const GuidesPage: NextPage = () => {
+const DiagramPage = () => {
     return (
         <div className={styles.container}>
             <Navbar />
-            <Guides />
+            <DiagramComponent />;
             <Footer />
         </div>
     );
 };
 
-export default GuidesPage;
+export default DiagramPage;
