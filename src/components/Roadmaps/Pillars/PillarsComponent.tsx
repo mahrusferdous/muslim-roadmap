@@ -1,4 +1,5 @@
 import { MouseEventHandler } from "react";
+import styles from "../../../styles/Diagram.module.css";
 
 interface PillarsComponentProps {
     selectedNode: any;
@@ -11,19 +12,7 @@ function PillarsComponent({ selectedNode, setSelectedNode }: PillarsComponentPro
     };
     return (
         <div>
-            <div
-                style={{
-                    position: "absolute",
-                    top: 0,
-                    right: 0,
-                    width: "100%",
-                    height: "100%",
-                    backgroundColor: "#f0f0f0",
-                    padding: "20px",
-                    boxSizing: "border-box",
-                    color: "#000",
-                }}
-            >
+            <div className={styles.side}>
                 <h2>{selectedNode.data.label}</h2>
                 <p>{selectedNode.data.paragraph}</p>
                 {selectedNode.data.point && (
