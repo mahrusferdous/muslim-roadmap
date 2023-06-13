@@ -1,10 +1,25 @@
 import React, { useState } from "react";
-import ReactFlow, { ReactFlowProvider, Background, MiniMap } from "reactflow";
+import ReactFlow, { ReactFlowProvider, Background, MiniMap, Node } from "reactflow";
 import ImanComponent from "./ImanComponent";
 
 import "reactflow/dist/style.css";
 
-const initialNodes = [
+interface NodeData {
+    id: string;
+    position: {
+        x: number;
+        y: number;
+    };
+    data: {
+        label: string;
+        paragraph: string;
+        point?: {
+            [key: number]: string;
+        };
+    };
+}
+
+const initialNodes: NodeData[] = [
     {
         id: "1",
         position: { x: 500, y: 50 },
@@ -69,7 +84,6 @@ const initialNodes = [
             },
         },
     },
-    ,
     {
         id: "7",
         position: { x: 950, y: 650 },
@@ -82,6 +96,7 @@ const initialNodes = [
         },
     },
 ];
+
 const initialEdges = [
     { id: "e1-2", source: "1", target: "2" },
     { id: "e1-3", source: "1", target: "3" },

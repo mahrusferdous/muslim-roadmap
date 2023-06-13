@@ -4,7 +4,22 @@ import ReactFlow, { ReactFlowProvider, Background, MiniMap } from "reactflow";
 import "reactflow/dist/style.css";
 import PillarsComponent from "./PillarsComponent";
 
-const initialNodes = [
+interface NodeData {
+    id: string;
+    position: {
+        x: number;
+        y: number;
+    };
+    data: {
+        label: string;
+        paragraph: string;
+        point?: {
+            [key: number]: string;
+        };
+    };
+}
+
+const initialNodes: NodeData[] = [
     {
         id: "1",
         position: { x: 500, y: 100 },
