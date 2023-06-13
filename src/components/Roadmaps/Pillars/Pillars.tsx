@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactFlow, { ReactFlowProvider, Controls, Background, MiniMap } from "reactflow";
 
 import "reactflow/dist/style.css";
+import PillarsComponent from "./PillarsComponent";
 
 const initialNodes = [
     { id: "1", position: { x: 500, y: 100 }, data: { label: "Islam 5 Pillars" } },
@@ -20,6 +21,14 @@ const initialEdges = [
 ];
 
 function DiagramComponent() {
+    const [selectedNodeId, setSelectedNodeId] = useState<string | boolean>(false);
+
+    const handleNodeClick = (event: any, node: { data: { label: string | boolean | ((prevState: string | boolean) => string | boolean) } }) => {
+        setSelectedNodeId(node.data.label);
+    };
+
+    const isSidebarOpen = selectedNodeId !== false;
+
     const minimapStyle = {
         height: 120,
     };
@@ -30,7 +39,7 @@ function DiagramComponent() {
                 style={{
                     width: "100%",
                     height: "80vh",
-                    // position: "relative", // Ensure the position is set to relative
+                    // position: "relative",
                 }}
             >
                 <div
@@ -40,10 +49,11 @@ function DiagramComponent() {
                     }}
                 >
                     <Background color="#aaa" gap={40} style={{ pointerEvents: "none" }} />
-                    <ReactFlow nodes={initialNodes} edges={initialEdges} />
+                    <ReactFlow nodes={initialNodes} edges={initialEdges} onNodeClick={handleNodeClick} />
                     <MiniMap style={minimapStyle} zoomable pannable />
                     <Controls />
                 </div>
+                {isSidebarOpen && <PillarsComponent selectedNodeId={selectedNodeId} setSelectedNodeId={setSelectedNodeId} />}
             </div>
         </ReactFlowProvider>
     );
