@@ -30,6 +30,7 @@ function DiagramComponent() {
                 style={{
                     width: "100%",
                     height: "80vh",
+                    // position: "relative", // Ensure the position is set to relative
                 }}
             >
                 <div
@@ -38,7 +39,7 @@ function DiagramComponent() {
                         height: "100%",
                     }}
                 >
-                    <Background color="#aaa" gap={40} />
+                    <Background color="#aaa" gap={40} style={{ pointerEvents: "none" }} />
                     <ReactFlow nodes={initialNodes} edges={initialEdges} />
                     <MiniMap style={minimapStyle} zoomable pannable />
                     <Controls />
