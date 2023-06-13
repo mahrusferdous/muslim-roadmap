@@ -1,12 +1,30 @@
 import React, { useState } from "react";
-import ReactFlow, { ReactFlowProvider, Controls, Background, MiniMap } from "reactflow";
+import ReactFlow, { ReactFlowProvider, Background, MiniMap } from "reactflow";
 
 import "reactflow/dist/style.css";
 import PillarsComponent from "./PillarsComponent";
 
 const initialNodes = [
-    { id: "1", position: { x: 500, y: 100 }, data: { label: "Islam 5 Pillars" } },
-    { id: "2", position: { x: 100, y: 200 }, data: { label: "Shahada (Faith)" } },
+    {
+        id: "1",
+        position: { x: 500, y: 100 },
+        data: {
+            label: "Islam 5 Pillars",
+        },
+    },
+    {
+        id: "2",
+        position: { x: 100, y: 200 },
+        data: {
+            label: "Shahada (Faith)",
+            paragraph:
+                "The declaration of faith, stating that there is no god but Allah, and Muhammad is his prophet. It's not directly stated in one specific verse but the concepts are found throughout the Quran.",
+            point: {
+                1: `"There is no deity except Him, the Exalted in Might, the Wise." (Quran 3:62)`,
+                2: `"Muhammad is not the father of [any] one of your men, but [he is] the Messenger of Allah and last of the prophets. And ever is Allah, of all things, Knowing." (Quran 33:40)`,
+            },
+        },
+    },
     { id: "3", position: { x: 300, y: 300 }, data: { label: "Salah (Prayer)" } },
     { id: "4", position: { x: 500, y: 400 }, data: { label: "Zakat (Charity)" } },
     { id: "5", position: { x: 700, y: 500 }, data: { label: "Sawm (Fasting)" } },
@@ -21,13 +39,13 @@ const initialEdges = [
 ];
 
 function DiagramComponent() {
-    const [selectedNodeId, setSelectedNodeId] = useState<string | boolean>(false);
+    const [selectedNode, setSelectedNode] = useState<Object>(false);
 
-    const handleNodeClick = (event: any, node: { data: { label: string | boolean | ((prevState: string | boolean) => string | boolean) } }) => {
-        setSelectedNodeId(node.data.label);
+    const handleNodeClick = (event: any, node: { data: React.SetStateAction<Object> }) => {
+        setSelectedNode(node);
     };
 
-    const isSidebarOpen = selectedNodeId !== false;
+    const isSidebarOpen = selectedNode !== false;
 
     const minimapStyle: React.CSSProperties = {
         height: 120,
@@ -56,7 +74,7 @@ function DiagramComponent() {
                     <ReactFlow style={{ fontWeight: "bold" }} nodes={initialNodes} edges={initialEdges} onNodeClick={handleNodeClick} />
                     <MiniMap style={minimapStyle} zoomable pannable />
                 </div>
-                {isSidebarOpen && <PillarsComponent selectedNodeId={selectedNodeId} setSelectedNodeId={setSelectedNodeId} />}
+                {isSidebarOpen && <PillarsComponent selectedNode={selectedNode} setSelectedNode={setSelectedNode} />}
             </div>
         </ReactFlowProvider>
     );
