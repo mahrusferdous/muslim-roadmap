@@ -10,6 +10,7 @@ const initialNodes = [
         position: { x: 500, y: 100 },
         data: {
             label: "Islam 5 Pillars",
+            paragraph: "The 5 pillars of Islam are the foundation of the religion. They are the basic acts that are mandatory for all Muslims.",
         },
     },
     {
@@ -25,10 +26,50 @@ const initialNodes = [
             },
         },
     },
-    { id: "3", position: { x: 300, y: 300 }, data: { label: "Salah (Prayer)" } },
-    { id: "4", position: { x: 500, y: 400 }, data: { label: "Zakat (Charity)" } },
-    { id: "5", position: { x: 700, y: 500 }, data: { label: "Sawm (Fasting)" } },
-    { id: "6", position: { x: 900, y: 600 }, data: { label: "Hajj (Hajj)" } },
+    {
+        id: "3",
+        position: { x: 300, y: 300 },
+        data: {
+            label: "Salah (Prayer)",
+            paragraph: "Muslims are expected to pray five times a day. This is mentioned in multiple verses.",
+            point: {
+                1: `"And establish prayer and give zakat and bow with those who bow [in worship and obedience]." (Quran 2:43)`,
+            },
+        },
+    },
+    {
+        id: "4",
+        position: { x: 500, y: 400 },
+        data: {
+            label: "Zakat (Charity)",
+            paragraph: "The practice of charitable giving based on accumulated wealth.",
+            point: {
+                1: `"Take, [O, Muhammad], from their wealth a charity by which you purify them and cause them increase, and invoke [Allah's blessings] upon them. Indeed, your invocations are reassurance for them. And Allah is Hearing and Knowing." (Quran 9:103)`,
+            },
+        },
+    },
+    {
+        id: "5",
+        position: { x: 700, y: 500 },
+        data: {
+            label: "Sawm (Fasting)",
+            paragraph: "During the holy month of Ramadan, Muslims are expected to fast from dawn to sunset.",
+            point: {
+                1: `"O you who have believed, decreed upon you is fasting as it was decreed upon those before you that you may become righteous." (Quran 2:183)`,
+            },
+        },
+    },
+    {
+        id: "6",
+        position: { x: 900, y: 600 },
+        data: {
+            label: "Hajj (Hajj)",
+            paragraph: "If physically and financially able, a Muslim is required to make a pilgrimage to Mecca at least once in their lifetime.",
+            point: {
+                1: `"And [due] to Allah from the people is a pilgrimage to the House - for whoever is able to find thereto a way." (Quran 3:97)`,
+            },
+        },
+    },
 ];
 const initialEdges = [
     { id: "e1-2", source: "1", target: "2" },

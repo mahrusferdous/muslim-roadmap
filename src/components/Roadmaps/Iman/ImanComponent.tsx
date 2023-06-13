@@ -1,12 +1,12 @@
 import { MouseEventHandler } from "react";
 import styles from "../../../styles/Diagram.module.css";
 
-interface PillarsComponentProps {
+interface ImanComponentProps {
     selectedNode: any;
     setSelectedNode: React.Dispatch<React.SetStateAction<any>>;
 }
 
-function PillarsComponent({ selectedNode, setSelectedNode }: PillarsComponentProps) {
+function ImanComponent({ selectedNode, setSelectedNode }: ImanComponentProps) {
     const handleCloseSidebar: MouseEventHandler<HTMLButtonElement> = (event) => {
         setSelectedNode(false);
     };
@@ -29,4 +29,4 @@ function PillarsComponent({ selectedNode, setSelectedNode }: PillarsComponentPro
     );
 }
 
-export default PillarsComponent;
+export default ImanComponent;

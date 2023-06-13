@@ -58,10 +58,25 @@
     border-color: #0070f3;
 }
 
+.side {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 700px;
+    height: 100%;
+    background-color: #f0f0f0;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #000;
+}
+
 @media (max-width: 600px) {
     .grid {
         width: 100%;
         flex-direction: column;
+    }
+    .side {
+        width: 100%;
     }
 }
 

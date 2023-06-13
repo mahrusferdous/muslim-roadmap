@@ -1,17 +1,17 @@
 import React from "react";
-import Pillars from "../components/Roadmaps/Pillars/Pillars";
 import Navbar from "../components/Head/Navbar";
 import Footer from "../components/Footer/Footer";
 import styles from "../styles/Home.module.css";
+import Iman from "../components/Roadmaps/Iman/Iman";
 
-const PillarsPage = () => {
+const ImanPage = () => {
     return (
         <div className={styles.container}>
             <Navbar />
-            <Pillars />;
+            <Iman />
             <Footer />
         </div>
     );
 };
 
-export default PillarsPage;
+export default ImanPage;
