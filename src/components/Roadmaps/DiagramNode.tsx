@@ -11,6 +11,10 @@ const DiagramNode: React.FC = () => {
                         <h2>Pillars</h2>
                         <p>The Five Pillars are the foundation of a Muslim&apos;s faith and practice. </p>
                     </Link>
+                    <Link href="/iman" className={styles.card}>
+                        <h2>Iman</h2>
+                        <p>Iman refers to a person's faith or belief</p>
+                    </Link>
                     <Link href="/prophets" className={styles.card}>
                         <h2>Prophets</h2>
                         <p>Prophets are the messengers of God. </p>
