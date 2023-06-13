@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import ReactFlow, { ReactFlowProvider, Background, MiniMap } from "reactflow";
-
-import "reactflow/dist/style.css";
 import PillarsComponent from "./PillarsComponent";
+import "reactflow/dist/style.css";
 
 interface NodeData {
     id: string;
