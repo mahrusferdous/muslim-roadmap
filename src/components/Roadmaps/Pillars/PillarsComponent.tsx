@@ -16,7 +16,7 @@ function PillarsComponent({ selectedNode, setSelectedNode }: PillarsComponentPro
                     position: "absolute",
                     top: 0,
                     right: 0,
-                    width: "700px",
+                    width: "100%",
                     height: "100%",
                     backgroundColor: "#f0f0f0",
                     padding: "20px",
