@@ -25,6 +25,7 @@ function PillarsComponent({ selectedNodeId, setSelectedNodeId }: PillarsComponen
                 }}
             >
                 <h2>{selectedNodeId}</h2>
+                <p></p>
                 <button onClick={handleCloseSidebar}>Close</button>
             </div>
         </div>
