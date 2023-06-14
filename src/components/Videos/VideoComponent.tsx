@@ -22,7 +22,7 @@ const VideoComponent = () => {
             <div className={styles.cardMain}>
                 <a href="https://www.youtube.com/@OneMessageFoundation" className={styles.largeCard} target="_blank" rel="noopener noreferrer">
                     <h2>One Message Foundation</h2>
-                    <p>Delivering insightful da'wah.</p>
+                    <p>Delivering insightful da&apos;wah.</p>
                 </a>
                 <a href="https://www.youtube.com/@muftimenkofficial" className={styles.largeCard} target="_blank" rel="noopener noreferrer">
                     <h2>Mufti Menk</h2>
@@ -33,8 +33,8 @@ const VideoComponent = () => {
                     <p>Sticks and stones will break your bones.</p>
                 </a>
                 <a href="https://www.youtube.com/@HamzasDen" className={styles.largeCard} target="_blank" rel="noopener noreferrer">
-                    <h2>Hamza's Den</h2>
-                    <p>Amazing convert giving insightful da'wah.</p>
+                    <h2>Hamza&apos;s Den</h2>
+                    <p>Amazing convert giving insightful da&apos;wah.</p>
                 </a>
             </div>
         </div>
