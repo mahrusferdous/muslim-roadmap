@@ -5,7 +5,7 @@
 }
 
 .main {
-    min-height: 100vh;
+    min-height: 30vh;
     padding: 4rem 0;
     flex: 1;
     display: flex;
@@ -118,6 +118,47 @@
 
 .img {
     margin-bottom: 4rem;
+}
+
+.cardMain {
+    display: flex;
+    flex: 1;
+    padding: 2rem 0;
+    flex-direction: column;
+}
+
+.cardMain a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.largeCard {
+    text-align: left;
+    color: inherit;
+    text-decoration: none;
+    border: 1px solid #eaeaea;
+    border-radius: 10px;
+    transition: color 0.15s ease, border-color 0.15s ease;
+    max-width: 100%;
+}
+
+.largeCard h2 {
+    padding: 0 5rem 0 0;
+    font-size: 1.5rem;
+}
+
+.largeCard p {
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+
+.largeCard:hover,
+.largeCard:focus,
+.largeCard:active {
+    color: #0070f3;
+    border-color: #0070f3;
 }
 
 @media (max-width: 600px) {
