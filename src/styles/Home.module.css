@@ -176,6 +176,15 @@
         height: 200px;
         width: 250px;
     }
+    .cardMain {
+        padding: 0;
+    }
+    .largeCard h2 {
+        font-size: 0.6rem;
+    }
+    .largeCard p {
+        font-size: 0.6rem;
+    }
 }
 
 @media (prefers-color-scheme: dark) {
