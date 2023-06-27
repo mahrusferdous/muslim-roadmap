@@ -7,7 +7,7 @@ const Navbar = () => {
     return (
         <nav className={styles.navbar}>
             <Link href="/" className={styles.logo}>
-                <Image src="/islam.png" alt="Muslim Roadmap Logo" width={100} height={80} />
+                <Image src="/islam.svg" alt="Muslim Roadmap Logo" width={100} height={80} />
             </Link>
             <div className={styles.navbarLinks}>
                 <div className={styles.navbarRight}>

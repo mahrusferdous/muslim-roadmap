@@ -5,7 +5,7 @@ const Home = () => {
     return (
         <div className={styles.container}>
             <main className={styles.main}>
-                <Image className={styles.img} src="/islam.png" alt="Islam" width={500} height={400} />
+                <Image className={styles.img} src="/islam.svg" alt="Islam" width={500} height={400} />
 
                 <h1 className={styles.title}>
                     May <code className={styles.al}>Allah</code> Guide You
