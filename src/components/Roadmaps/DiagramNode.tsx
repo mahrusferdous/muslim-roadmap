@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../styles/Home.module.css";
+import styles from "../../styles/Diagram.module.css";
 import Link from "next/link";
 
 const DiagramNode: React.FC = () => {
@@ -9,15 +9,15 @@ const DiagramNode: React.FC = () => {
                 <div className={styles.grid}>
                     <Link href="/pillars" className={styles.card}>
                         <h2>Pillars</h2>
-                        <p>The Five Pillars are the foundation of a Muslim&apos;s faith and practice.</p>
+                        {/* <p>The Five Pillars are the foundation of a Muslim&apos;s faith and practice.</p> */}
                     </Link>
                     <Link href="/iman" className={styles.card}>
                         <h2>Iman</h2>
-                        <p>Iman refers to a person&apos;s faith or belief.</p>
+                        {/* <p>Iman refers to a person&apos;s faith or belief.</p> */}
                     </Link>
                     <Link href="/prophets" className={styles.card}>
                         <h2>Prophets</h2>
-                        <p>Prophets are the messengers of God.</p>
+                        {/* <p>Prophets are the messengers of God.</p> */}
                     </Link>
                 </div>
             </div>
