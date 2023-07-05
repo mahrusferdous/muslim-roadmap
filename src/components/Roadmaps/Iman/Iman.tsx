@@ -139,7 +139,7 @@ function Iman() {
                     }}
                 >
                     <Background color="#aaa" gap={40} style={{ pointerEvents: "none" }} />
-                    <ReactFlow style={{ fontWeight: "bold" }} nodes={initialNodes} edges={initialEdges} onNodeClick={handleNodeClick} />
+                    <ReactFlow style={{ fontWeight: "bold" }} nodes={initialNodes} edges={initialEdges} onNodeClick={handleNodeClick} fitView />
                     <MiniMap style={minimapStyle} zoomable pannable />
                 </div>
                 {isSidebarOpen && <ImanComponent selectedNode={selectedNode} setSelectedNode={setSelectedNode} />}
