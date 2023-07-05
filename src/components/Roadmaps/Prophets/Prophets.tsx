@@ -79,7 +79,7 @@ function DiagramComponent() {
                     }}
                 >
                     <Background color="#aaa" gap={40} style={{ pointerEvents: "none" }} />
-                    <ReactFlow style={{ fontWeight: "bold" }} nodes={initialNodes} edges={initialEdges} />
+                    <ReactFlow style={{ fontWeight: "bold" }} nodes={initialNodes} edges={initialEdges} fitView />
                     <MiniMap style={minimapStyle} zoomable pannable />
                 </div>
             </div>
