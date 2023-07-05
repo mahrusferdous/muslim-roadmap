@@ -1,72 +1,28 @@
-import React, { useCallback } from "react";
-import ReactFlow, {
-    MiniMap,
-    Controls,
-    Background,
-    useNodesState,
-    useEdgesState,
-    addEdge,
-    Handle,
-    Position,
-    ReactFlowProvider,
-    Connection,
-    Edge,
-} from "reactflow";
-
-import "reactflow/dist/style.css";
-
-const MuslimNode = ({ data }: any) => {
-    return (
-        <div
-            style={{
-                background: "#fff",
-                borderRadius: "2px",
-                width: "150px",
-                height: "35px",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                border: "1px solid #ddd",
-                boxShadow: "2px 2px 2px rgba(0,0,0,0.2)",
-            }}
-        >
-            <Handle type="target" position={Position.Top} style={{ background: "#555" }} />
-            <Handle type="source" position={Position.Bottom} style={{ background: "#555" }} />
-            <Handle id="a" type="source" position={Position.Right} style={{ background: "#555" }} />
-            <Handle id="b" type="source" position={Position.Left} style={{ background: "#555" }} />
-            <div style={{ color: "black", fontSize: "12px" }}>{data.label}</div>
-        </div>
-    );
-};
-
-const CustomNode = ({ data }: any) => {
-    return (
-        <div
-            style={{
-                background: "#fff",
-                borderRadius: "2px",
-                width: "150px",
-                height: "35px",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                border: "1px solid #ddd",
-                boxShadow: "2px 2px 2px rgba(0,0,0,0.2)",
-            }}
-        >
-            <Handle type="target" position={Position.Right} style={{ background: "#555" }} />
-            <Handle id="a" type="target" position={Position.Left} style={{ background: "#555" }} />
-            <Handle type="source" position={Position.Left} style={{ background: "#555" }} />
-            <Handle id="a" type="source" position={Position.Right} style={{ background: "#555" }} />
-            <div style={{ color: "black", fontSize: "12px" }}>{data.label}</div>
-        </div>
-    );
-};
+import { Position } from "reactflow";
+import { MuslimNode, CustomNode } from "../components/Roadmaps/BaseRoadmap/BaseNodes";
 
 const nodeTypes = {
     muslimNode: MuslimNode,
     customNode: CustomNode,
 };
+
+// interface Node {
+//     id: string;
+//     type?: string;
+//     position: { x: number; y: number };
+//     data: { label: string };
+//     targetPosition?: string;
+// }
+
+interface Edge {
+    id: string;
+    source: string;
+    target: string;
+    type?: string;
+    animated?: boolean;
+    sourceHandle?: string;
+    targetHandle?: string;
+}
 
 const initialNodes: any = [
     {
@@ -221,7 +177,7 @@ const initialNodes: any = [
         targetPosition: Position.Left,
     },
 ];
-const initialEdges = [
+const initialEdges: Edge[] = [
     { id: "e1-2", source: "1", target: "2", animated: true },
     { id: "e2-3", source: "2", target: "3", type: "smoothstep", animated: true, sourceHandle: "b" },
     { id: "e2-4", source: "2", target: "4", type: "smoothstep", animated: true, sourceHandle: "a", targetHandle: "a" },
@@ -242,48 +198,4 @@ const initialEdges = [
     { id: "e4-17", source: "4", target: "17", sourceHandle: "a" },
 ];
 
-export default function App() {
-    const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
-    const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
-
-    const onConnect = useCallback((params: Edge | Connection) => setEdges((eds) => addEdge(params, eds)), [setEdges]);
-
-    const minimapStyle: React.CSSProperties = {
-        height: 120,
-        backgroundColor: "transparent",
-        position: "absolute",
-        bottom: "10px",
-        left: "10px",
-    };
-
-    return (
-        <ReactFlowProvider>
-            <div
-                style={{
-                    width: "100%",
-                    height: "80vh",
-                    // position: "relative",
-                }}
-            >
-                <div
-                    style={{
-                        width: "100%",
-                        height: "100%",
-                    }}
-                >
-                    <Background color="#aaa" gap={40} style={{ pointerEvents: "none" }} />
-                    <ReactFlow
-                        nodes={nodes}
-                        edges={edges}
-                        onNodesChange={onNodesChange}
-                        onEdgesChange={onEdgesChange}
-                        onConnect={onConnect}
-                        nodeTypes={nodeTypes}
-                        fitView
-                    ></ReactFlow>
-                    <MiniMap style={minimapStyle} zoomable pannable />
-                </div>
-            </div>
-        </ReactFlowProvider>
-    );
-}
+export { initialNodes, initialEdges, nodeTypes };
