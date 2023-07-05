@@ -7,6 +7,12 @@ const DiagramNode: React.FC = () => {
         <div className={styles.container}>
             <div className={styles.main}>
                 <div className={styles.grid}>
+                    <Link href="/baseroadmap" className={styles.card}>
+                        <h2>Base Roadmap</h2>
+                    </Link>
+                </div>
+                <h1 className={styles.title}>Roadmaps</h1>
+                <div className={styles.grid}>
                     <Link href="/pillars" className={styles.card}>
                         <h2>Pillars</h2>
                     </Link>
