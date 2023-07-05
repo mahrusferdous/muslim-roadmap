@@ -1,9 +1,21 @@
 import React, { useCallback } from "react";
-import ReactFlow, { MiniMap, Controls, Background, useNodesState, useEdgesState, addEdge, Handle, Position, ReactFlowProvider } from "reactflow";
+import ReactFlow, {
+    MiniMap,
+    Controls,
+    Background,
+    useNodesState,
+    useEdgesState,
+    addEdge,
+    Handle,
+    Position,
+    ReactFlowProvider,
+    Connection,
+    Edge,
+} from "reactflow";
 
 import "reactflow/dist/style.css";
 
-const MuslimNode = ({ data }) => {
+const MuslimNode = ({ data }: any) => {
     return (
         <div
             style={{
@@ -27,7 +39,7 @@ const MuslimNode = ({ data }) => {
     );
 };
 
-const CustomNode = ({ data }) => {
+const CustomNode = ({ data }: any) => {
     return (
         <div
             style={{
@@ -45,7 +57,7 @@ const CustomNode = ({ data }) => {
             <Handle type="target" position={Position.Right} style={{ background: "#555" }} />
             <Handle id="a" type="target" position={Position.Left} style={{ background: "#555" }} />
             <Handle type="source" position={Position.Left} style={{ background: "#555" }} />
-            <Handle id="a" type="source" position={Position.Left} style={{ background: "#555" }} />
+            <Handle id="a" type="source" position={Position.Right} style={{ background: "#555" }} />
             <div style={{ color: "black", fontSize: "12px" }}>{data.label}</div>
         </div>
     );
@@ -56,14 +68,13 @@ const nodeTypes = {
     customNode: CustomNode,
 };
 
-const initialNodes: NodeData[] = [
+const initialNodes: any = [
     {
         id: "1",
         type: "input",
         position: { x: 550, y: 50 },
         data: {
             label: "Islam",
-            paragraph: "Iman, or faith, in Islam is traditionally broken down into belief in six articles of faith. ",
         },
     },
     {
@@ -72,10 +83,6 @@ const initialNodes: NodeData[] = [
         position: { x: 450, y: 250 },
         data: {
             label: "Muslim",
-            paragraph: "The fundamental belief in Islam is that there is only one God, Allah.",
-            point: {
-                1: `"Say, 'He is Allah, [who is] One, Allah, the Eternal Refuge. He neither begets nor is born, Nor is there to Him any equivalent.'" (Quran 112:1-4)`,
-            },
         },
     },
     {
@@ -84,10 +91,6 @@ const initialNodes: NodeData[] = [
         position: { x: 200, y: 200 },
         data: {
             label: "Pillars",
-            paragraph: "Muslims believe in the existence of angels as beings created by Allah.",
-            point: {
-                1: `"The Messenger has believed in what was revealed to him from his Lord, and [so have] the believers. All of them have believed in Allah and His angels and His books and His messengers, [saying], 'We make no distinction between any of His messengers.'" (Quran 2:285)`,
-            },
         },
     },
     {
@@ -96,11 +99,6 @@ const initialNodes: NodeData[] = [
         position: { x: 800, y: 300 },
         data: {
             label: "Iman",
-            paragraph:
-                "Muslims believe in the books that Allah sent to various prophets throughout history, including the Quran, which was sent to the Prophet Muhammad.",
-            point: {
-                1: `"Say, 'We have believed in Allah and in what was revealed to us and what was revealed to Abraham, Ishmael, Isaac, Jacob, and the Descendants, and in what was given to Moses and Jesus and to the prophets from their Lord. We make no distinction between any of them, and we are Muslims [submitting] to Him.'" (Quran 3:84)`,
-            },
         },
     },
     {
@@ -108,10 +106,6 @@ const initialNodes: NodeData[] = [
         position: { x: 550, y: 450 },
         data: {
             label: "Quran",
-            paragraph: "Muslims believe in all the prophets sent by Allah, including Adam, Noah, Abraham, Moses, Jesus, and Muhammad.",
-            point: {
-                1: `"Say, [O believers], 'We have believed in Allah and what has been revealed to us and what has been revealed to Abraham and Ishmael and Isaac and Jacob and the Descendants and what was given to Moses and Jesus and what was given to the prophets from their Lord. We make no distinction between any of them, and we are Muslims [in submission] to Him.'" (Quran 2:136)`,
-            },
         },
     },
     {
@@ -120,25 +114,111 @@ const initialNodes: NodeData[] = [
         position: { x: 450, y: 550 },
         data: {
             label: "Muhammad",
-            paragraph: "Muslims believe that all humans will be held accountable for their actions in this life on the Day of Judgment.",
-            point: {
-                1: `"Indeed, those who do not believe in Allah and His messengers and wish to discriminate between Allah and His messengers and say, 'We believe in some and disbelieve in others,' and wish to adopt a way in between - Those are the disbelievers, truly. And We have prepared for the disbelievers a humiliating punishment." (Quran 4:150-151)`,
-            },
         },
     },
 
+    //Pillars
     {
         id: "7",
         type: "output",
-        position: { x: 100, y: 150 },
+        position: { x: 0, y: 100 },
         data: {
             label: "Shahada",
-            paragraph: "Muslims believe that Allah is the Creator of all things, and that He is all-powerful and all-knowing.",
-            point: {
-                1: `"Allah is the Creator of all things, and He is, over all things, Disposer of affairs." (Quran 39:62)`,
-            },
         },
         targetPosition: Position.Right,
+    },
+    {
+        id: "8",
+        type: "output",
+        position: { x: 0, y: 190 },
+        data: {
+            label: "Salah",
+        },
+        targetPosition: Position.Right,
+    },
+    {
+        id: "9",
+        type: "output",
+        position: { x: 0, y: 280 },
+        data: {
+            label: "Zakat",
+        },
+        targetPosition: Position.Right,
+    },
+    {
+        id: "10",
+        type: "output",
+        position: { x: 0, y: 370 },
+        data: {
+            label: "Sawm",
+        },
+        targetPosition: Position.Right,
+    },
+    {
+        id: "11",
+        type: "output",
+        position: { x: 0, y: 450 },
+        data: {
+            label: "Hajj",
+        },
+        targetPosition: Position.Right,
+    },
+
+    //Iman
+    {
+        id: "12",
+        type: "output",
+        position: { x: 1000, y: 75 },
+        data: {
+            label: "Belief in Allah",
+        },
+        targetPosition: Position.Left,
+    },
+    {
+        id: "13",
+        type: "output",
+        position: { x: 1000, y: 150 },
+        data: {
+            label: "Belief in Angels",
+        },
+        targetPosition: Position.Left,
+    },
+    {
+        id: "14",
+        type: "output",
+        position: { x: 1000, y: 225 },
+
+        data: {
+            label: "Belief in the Divine Books",
+        },
+        targetPosition: Position.Left,
+    },
+    {
+        id: "15",
+        type: "output",
+        position: { x: 1000, y: 300 },
+        data: {
+            label: "Belief in the Prophets",
+        },
+        targetPosition: Position.Left,
+    },
+    {
+        id: "16",
+        type: "output",
+        position: { x: 1000, y: 375 },
+        data: {
+            label: "Belief in the Day of Judgement",
+        },
+        targetPosition: Position.Left,
+    },
+    {
+        id: "17",
+        type: "output",
+        position: { x: 1000, y: 450 },
+        data: {
+            label: "Belief in Qadr",
+        },
+        targetPosition: Position.Left,
     },
 ];
 const initialEdges = [
@@ -147,13 +227,26 @@ const initialEdges = [
     { id: "e2-4", source: "2", target: "4", type: "smoothstep", animated: true, sourceHandle: "a", targetHandle: "a" },
     { id: "e2-5", source: "2", target: "5", animated: true },
     { id: "e5-6", source: "5", target: "6", animated: true },
+
+    { id: "e3-7", source: "3", target: "7" },
+    { id: "e3-8", source: "3", target: "8" },
+    { id: "e3-9", source: "3", target: "9" },
+    { id: "e3-10", source: "3", target: "10" },
+    { id: "e3-11", source: "3", target: "11" },
+
+    { id: "e4-12", source: "4", target: "12", sourceHandle: "a" },
+    { id: "e4-13", source: "4", target: "13", sourceHandle: "a" },
+    { id: "e4-14", source: "4", target: "14", sourceHandle: "a" },
+    { id: "e4-15", source: "4", target: "15", sourceHandle: "a" },
+    { id: "e4-16", source: "4", target: "16", sourceHandle: "a" },
+    { id: "e4-17", source: "4", target: "17", sourceHandle: "a" },
 ];
 
 export default function App() {
     const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
     const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
 
-    const onConnect = useCallback((params) => setEdges((eds) => addEdge(params, eds)), [setEdges]);
+    const onConnect = useCallback((params: Edge | Connection) => setEdges((eds) => addEdge(params, eds)), [setEdges]);
 
     const minimapStyle: React.CSSProperties = {
         height: 120,
