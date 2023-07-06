@@ -1,4 +1,4 @@
-import styles from "../../styles/Home.module.css";
+import styles from "../../styles/Guide.module.css";
 import GuideNode from "./GuideNode";
 
 const Guides = () => {
