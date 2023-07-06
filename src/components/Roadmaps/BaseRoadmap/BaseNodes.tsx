@@ -1,20 +1,9 @@
 import { Handle, Position } from "reactflow";
+import styles from "../../../styles/BaseNode.module.css";
 
 const MuslimNode = ({ data }: any) => {
     return (
-        <div
-            style={{
-                background: "#fff",
-                borderRadius: "2px",
-                width: "150px",
-                height: "35px",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                border: "1px solid #ddd",
-                boxShadow: "2px 2px 2px rgba(0,0,0,0.2)",
-            }}
-        >
+        <div className={styles.muslimNode}>
             <Handle type="target" position={Position.Top} style={{ background: "#555" }} />
             <Handle type="source" position={Position.Bottom} style={{ background: "#555" }} />
             <Handle id="a" type="source" position={Position.Right} style={{ background: "#555" }} />
@@ -26,19 +15,7 @@ const MuslimNode = ({ data }: any) => {
 
 const CustomNode = ({ data }: any) => {
     return (
-        <div
-            style={{
-                background: "#fff",
-                borderRadius: "2px",
-                width: "150px",
-                height: "35px",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                border: "1px solid #ddd",
-                boxShadow: "2px 2px 2px rgba(0,0,0,0.2)",
-            }}
-        >
+        <div className={styles.muslimNode}>
             <Handle type="target" position={Position.Right} style={{ background: "#555" }} />
             <Handle id="a" type="target" position={Position.Left} style={{ background: "#555" }} />
             <Handle type="source" position={Position.Left} style={{ background: "#555" }} />
