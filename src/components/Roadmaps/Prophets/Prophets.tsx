@@ -1,62 +1,9 @@
 import React from "react";
 import ReactFlow, { ReactFlowProvider, Background, MiniMap } from "reactflow";
 import "reactflow/dist/style.css";
+import { initialNodes, initialEdges } from "../../../data/ProphetData";
 
-const prophets = [
-    "Adam",
-    "Idris",
-    "Nuh",
-    "Hud",
-    "Salih",
-    "Ibrahim",
-    "Lut",
-    "Ismail",
-    "Ishaq",
-    "Yaqub",
-    "Yusuf",
-    "Shu'aib",
-    "Ayyub",
-    "Musa",
-    "Harun",
-    "Dhu'l-Kifl",
-    "Dawud",
-    "Sulayman",
-    "Ilyas",
-    "Alyasa",
-    "Yunus",
-    "Zakariya",
-    "Yahya",
-    "Isa",
-    "Muhammad",
-];
-
-interface Node {
-    id: string;
-    position: { x: number; y: number };
-    data: { label: string };
-}
-
-interface Edge {
-    id: string;
-    source: string;
-    target: string;
-}
-
-const initialNodes = prophets.map((prophet, i) => ({
-    id: `${i}`,
-    position: { x: i * 150, y: i * 100 },
-    data: { label: prophet },
-}));
-
-const initialEdges = prophets
-    .map((_, i) => ({
-        id: `e${i}-${i + 1}`,
-        source: `${i}`,
-        target: `${i + 1}`,
-    }))
-    .slice(0, -1); // remove the last edge, which is invalid
-
-function DiagramComponent() {
+const Prophets = () => {
     const minimapStyle: React.CSSProperties = {
         height: 120,
         backgroundColor: "transparent",
@@ -85,6 +32,6 @@ function DiagramComponent() {
             </div>
         </ReactFlowProvider>
     );
-}
+};
 
-export default DiagramComponent;
+export default Prophets;

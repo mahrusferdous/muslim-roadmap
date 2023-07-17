@@ -1,0 +1,48 @@
+/* Home.module.css */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbarLinks {
+    display: flex;
+}
+
+.navbarRight {
+    margin-left: auto;
+}
+
+.navbarLink {
+    /* color: #f5f5f5; */
+    text-decoration: none;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.navbarLink:hover {
+    color: #7f7f7f;
+}
+
+.navbarLink:last-child {
+    margin-right: 0;
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        padding: 10px 5px;
+    }
+}
+
+@media (max-width: 400px) {
+    .navbar {
+        padding: 10px 0px;
+    }
+}
