@@ -4,8 +4,13 @@ import Image from "next/image";
 import styles from "../../styles/NavBar.module.css";
 import { ThemeContext } from "../Context/ThemeContext";
 
+interface ThemeContextProps {
+    isDarkMode: boolean;
+    toggleTheme: () => void;
+}
+
 const Navbar = () => {
-    const { isDarkMode, toggleTheme } = useContext(ThemeContext);
+    const { isDarkMode, toggleTheme } = useContext(ThemeContext) as ThemeContextProps;
 
     useEffect(() => {
         document.documentElement.setAttribute("data-theme", isDarkMode ? "dark" : "light");
