@@ -47,8 +47,4 @@ Contributions are welcome and encouraged! If you would like to contribute to thi
 
 Please make sure to follow the code style and best practices used in this project, and include tests for any new features or bug fixes.
 
-## Contact
-
-If you have any questions or suggestions about this project, please contact us at info@muslimroadmap.com.
-
-We hope you find Muslim Roadmap useful!
+#### We hope you find Muslim Roadmap useful!
