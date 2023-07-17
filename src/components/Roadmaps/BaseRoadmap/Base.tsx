@@ -1,6 +1,6 @@
 import React, { useCallback, useState, useEffect } from "react";
 import ReactFlow, { MiniMap, Background, useNodesState, useEdgesState, addEdge, ReactFlowProvider, Connection, Edge } from "reactflow";
-import { initialNodes, initialEdges, nodeTypes } from "../../../data/BaseComponentData";
+import { initialNodes, initialEdges, nodeTypes } from "../../../data/BaseData";
 import "reactflow/dist/style.css";
 
 const BaseComponentData: React.FC = () => {
