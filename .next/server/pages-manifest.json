@@ -1,14 +1,6 @@
 {
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
-  "/guides": "pages/guides.html",
-  "/baseroadmap": "pages/baseroadmap.html",
-  "/iman": "pages/iman.html",
-  "/": "pages/index.html",
-  "/pillars": "pages/pillars.html",
-  "/prophets": "pages/prophets.html",
-  "/roadmaps": "pages/roadmaps.html",
-  "/videos": "pages/videos.html",
   "/_document": "pages/_document.js",
-  "/404": "pages/404.html"
+  "/guides": "pages/guides.js"
 }
