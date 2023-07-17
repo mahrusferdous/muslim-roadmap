@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "../../styles/NavBar.module.css";
@@ -11,6 +11,25 @@ interface ThemeContextProps {
 
 const Navbar = () => {
     const { isDarkMode, toggleTheme } = useContext(ThemeContext) as ThemeContextProps;
+    const [logoWidth, setLogoWidth] = useState(100);
+    const [logoHeight, setLogoHeight] = useState(80);
+
+    useEffect(() => {
+        const updateLogoSize = () => {
+            const isSmallScreen = window.innerWidth < 600;
+            const width = isSmallScreen ? 50 : 100;
+            const height = isSmallScreen ? 40 : 80;
+            setLogoWidth(width);
+            setLogoHeight(height);
+        };
+
+        updateLogoSize();
+        window.addEventListener("resize", updateLogoSize);
+
+        return () => {
+            window.removeEventListener("resize", updateLogoSize);
+        };
+    }, []);
 
     useEffect(() => {
         document.documentElement.setAttribute("data-theme", isDarkMode ? "dark" : "light");
@@ -18,10 +37,6 @@ const Navbar = () => {
 
     const moonEmoji = "☽";
     const sunEmoji = "✹";
-
-    const isSmallScreen = typeof window !== "undefined" && window.innerWidth < 600;
-    const logoWidth = isSmallScreen ? 50 : 100;
-    const logoHeight = isSmallScreen ? 40 : 80;
 
     return (
         <nav className={styles.navbar}>
