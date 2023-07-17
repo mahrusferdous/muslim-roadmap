@@ -34,3 +34,15 @@
 .navbarLink:last-child {
     margin-right: 0;
 }
+
+@media (max-width: 600px) {
+    .navbar {
+        padding: 10px 5px;
+    }
+}
+
+@media (max-width: 400px) {
+    .navbar {
+        padding: 10px 0px;
+    }
+}
