@@ -1,8 +1,7 @@
-import React, { useContext, useEffect } from "react";
+import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "../../styles/NavBar.module.css";
-import { ThemeContext } from "../Context/ThemeContext";
 
 interface ThemeContextProps {
     isDarkMode: boolean;
@@ -18,7 +17,7 @@ const Navbar = () => {
 
     const moonEmoji = "☽";
     const sunEmoji = "✹";
-
+  
     return (
         <nav className={styles.navbar}>
             <Link href="/" className={styles.logo}>
@@ -26,10 +25,6 @@ const Navbar = () => {
             </Link>
             <div className={styles.navbarLinks}>
                 <div className={styles.navbarRight}>
-                    <button style={{ width: "30px" }} onClick={toggleTheme}>
-                        {isDarkMode ? sunEmoji : moonEmoji}
-                    </button>
-
                     <Link href="/roadmaps" passHref className={styles.navbarLink}>
                         Roadmaps
                     </Link>
