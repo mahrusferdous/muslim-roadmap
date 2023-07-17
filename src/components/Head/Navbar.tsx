@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "../../styles/NavBar.module.css";
+import { ThemeContext } from "../Context/ThemeContext";
 
 interface ThemeContextProps {
     isDarkMode: boolean;
