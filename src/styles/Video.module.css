@@ -50,3 +50,9 @@
         font-size: 0.6rem;
     }
 }
+
+@media (prefers-color-scheme: dark) {
+    .largeCard {
+        border-color: #222;
+    }
+}
