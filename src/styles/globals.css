@@ -14,12 +14,17 @@ a {
     box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-    html {
-        color-scheme: dark;
-    }
-    body {
-        color: white;
-        background: black;
-    }
+:root {
+    --color-background: white;
+    --color-text: black;
+}
+
+[data-theme="dark"] {
+    --color-background: black;
+    --color-text: white;
+}
+
+body {
+    background-color: var(--color-background);
+    color: var(--color-text);
 }
