@@ -3,7 +3,21 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "../../styles/NavBar.module.css";
 
+interface ThemeContextProps {
+    isDarkMode: boolean;
+    toggleTheme: () => void;
+}
+
 const Navbar = () => {
+    const { isDarkMode, toggleTheme } = useContext(ThemeContext) as ThemeContextProps;
+
+    useEffect(() => {
+        document.documentElement.setAttribute("data-theme", isDarkMode ? "dark" : "light");
+    }, [isDarkMode]);
+
+    const moonEmoji = "☽";
+    const sunEmoji = "✹";
+  
     return (
         <nav className={styles.navbar}>
             <Link href="/" className={styles.logo}>
