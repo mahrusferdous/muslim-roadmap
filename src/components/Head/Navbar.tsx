@@ -1,15 +1,15 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "../../styles/NavBar.module.css";
+import { ThemeContext } from "../Context/ThemeContext";
 
 const Navbar = () => {
-    const [isDarkMode, setIsDarkMode] = useState(false);
+    const { isDarkMode, toggleTheme } = useContext(ThemeContext);
 
-    const handleModeToggle = () => {
-        setIsDarkMode((prevMode) => !prevMode);
-        // You can implement logic here to toggle the dark/light mode styles or theme
-    };
+    useEffect(() => {
+        document.documentElement.setAttribute("data-theme", isDarkMode ? "dark" : "light");
+    }, [isDarkMode]);
 
     const moonEmoji = "☽";
     const sunEmoji = "✹";
@@ -21,7 +21,7 @@ const Navbar = () => {
             </Link>
             <div className={styles.navbarLinks}>
                 <div className={styles.navbarRight}>
-                    <button style={{ width: "30px" }} onClick={handleModeToggle}>
+                    <button style={{ width: "30px" }} onClick={toggleTheme}>
                         {isDarkMode ? sunEmoji : moonEmoji}
                     </button>
 
