@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../styles/Guide.module.css";
+import styles from "../../styles/Home.module.css";
 
 interface GuideNodeProps {
     site: string;
