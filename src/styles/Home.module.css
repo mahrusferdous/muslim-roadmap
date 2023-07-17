@@ -14,6 +14,22 @@
     align-items: center;
 }
 
+.footer {
+    display: flex;
+    flex: 1;
+    padding: 2rem 0;
+    border-top: 1px solid #eaeaea;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
 .title a {
     color: #0070f3;
     text-decoration: none;
@@ -57,11 +73,100 @@
     font-size: 4rem;
 }
 
+.grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 800px;
+}
+
+.card {
+    margin: 1rem;
+    padding: 1.5rem;
+    text-align: left;
+    color: inherit;
+    text-decoration: none;
+    border: 1px solid #eaeaea;
+    border-radius: 10px;
+    transition: color 0.15s ease, border-color 0.15s ease;
+    width: 300px;
+    height: 180px;
+}
+
+.card:hover,
+.card:focus,
+.card:active {
+    color: #0070f3;
+    border-color: #0070f3;
+}
+
+.card h2 {
+    margin: 0 0 1rem 0;
+    font-size: 1.5rem;
+}
+
+.card p {
+    margin: 0;
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+
+.logo {
+    height: 1em;
+    margin-left: 0.5rem;
+}
+
 .img {
     margin-bottom: 4rem;
 }
 
+.cardMain {
+    display: flex;
+    flex: 1;
+    padding: 2rem 0;
+    flex-direction: column;
+}
+
+.cardMain a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.largeCard {
+    text-align: left;
+    color: inherit;
+    text-decoration: none;
+    border: 1px solid #eaeaea;
+    border-radius: 10px;
+    transition: color 0.15s ease, border-color 0.15s ease;
+    max-width: 100%;
+}
+
+.largeCard h2 {
+    padding: 0 5rem 0 0;
+    font-size: 1.5rem;
+}
+
+.largeCard p {
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+
+.largeCard:hover,
+.largeCard:focus,
+.largeCard:active {
+    color: #0070f3;
+    border-color: #0070f3;
+}
+
 @media (max-width: 600px) {
+    .grid {
+        width: 100%;
+        flex-direction: column;
+    }
     .title {
         font-size: 3rem;
     }
@@ -72,11 +177,27 @@
         height: 200px;
         width: 250px;
     }
+    .cardMain {
+        padding: 0;
+    }
+    .largeCard h2 {
+        font-size: 0.6rem;
+    }
+    .largeCard p {
+        font-size: 0.6rem;
+    }
 }
 
 @media (prefers-color-scheme: dark) {
+    .card,
+    .footer {
+        border-color: #222;
+    }
     .code,
     .al {
-        background: #7f7f7f;
+        background: #111;
     }
+    /* .logo img {
+        filter: invert(1);
+    } */
 }
