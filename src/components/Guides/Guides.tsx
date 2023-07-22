@@ -25,11 +25,7 @@ const Guides = () => {
                     paragraph={"One of the Islamic content creator answers questions in very entertaining format."}
                 /> */}
                 {/* <GuideNode site={"https://corpus.quran.com/"} name={"Corpus"} paragraph={"Break down of Quranic knowledge."} /> */}
-                <GuideNode
-                    site={"https://islamic.network/"}
-                    name={"Open Source Community"}
-                    paragraph={"Feel free to contribute to open source community."}
-                />
+                <GuideNode site={"https://islamic.network/"} name={"Open Source Community"} paragraph={"Feel free to contribute."} />
             </div>
         </div>
     );
