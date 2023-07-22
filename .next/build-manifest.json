@@ -5,8 +5,8 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/FT8gH2t2wdItC9vjuH1qy/_buildManifest.js",
-    "static/FT8gH2t2wdItC9vjuH1qy/_ssgManifest.js"
+    "static/JLsU7f5-Gc9eymjqj6PZM/_buildManifest.js",
+    "static/JLsU7f5-Gc9eymjqj6PZM/_ssgManifest.js"
   ],
   "rootMainFiles": [],
   "pages": {
@@ -16,7 +16,7 @@
       "static/chunks/main-af3068766efac2e7.js",
       "static/chunks/61-0a5281bb902a2a4d.js",
       "static/css/62941d614ae1859a.css",
-      "static/chunks/pages/index-b5950faa617fec22.js"
+      "static/chunks/pages/index-feda198b25e5e3ba.js"
     ],
     "/_app": [
       "static/chunks/webpack-8fa1640cc84ba8fe.js",
@@ -39,7 +39,7 @@
       "static/chunks/61-0a5281bb902a2a4d.js",
       "static/chunks/7-27ecc581743ff356.js",
       "static/css/8ca69325baafa4ba.css",
-      "static/chunks/pages/baseroadmap-bed8b591a4061d48.js"
+      "static/chunks/pages/baseroadmap-983f4f6a82ad6233.js"
     ],
     "/guides": [
       "static/chunks/webpack-8fa1640cc84ba8fe.js",
@@ -47,7 +47,7 @@
       "static/chunks/main-af3068766efac2e7.js",
       "static/chunks/61-0a5281bb902a2a4d.js",
       "static/css/6a74165fcdccbb66.css",
-      "static/chunks/pages/guides-50b185e8607ffe31.js"
+      "static/chunks/pages/guides-88f9e82ec9718e7a.js"
     ],
     "/iman": [
       "static/chunks/webpack-8fa1640cc84ba8fe.js",
@@ -57,7 +57,7 @@
       "static/chunks/61-0a5281bb902a2a4d.js",
       "static/chunks/7-27ecc581743ff356.js",
       "static/css/9dad77df5b7efa43.css",
-      "static/chunks/pages/iman-ba7def26372d42cc.js"
+      "static/chunks/pages/iman-c9259121db543021.js"
     ],
     "/pillars": [
       "static/chunks/webpack-8fa1640cc84ba8fe.js",
@@ -67,7 +67,7 @@
       "static/chunks/61-0a5281bb902a2a4d.js",
       "static/chunks/7-27ecc581743ff356.js",
       "static/css/4825b689a21fb1df.css",
-      "static/chunks/pages/pillars-e26eba384fe70976.js"
+      "static/chunks/pages/pillars-b89dfc540a17e113.js"
     ],
     "/prophets": [
       "static/chunks/webpack-8fa1640cc84ba8fe.js",
@@ -77,7 +77,7 @@
       "static/chunks/61-0a5281bb902a2a4d.js",
       "static/chunks/7-27ecc581743ff356.js",
       "static/css/dcc0d0b1be403b34.css",
-      "static/chunks/pages/prophets-d6815451ef61df08.js"
+      "static/chunks/pages/prophets-7618fd5b7cd70410.js"
     ],
     "/roadmaps": [
       "static/chunks/webpack-8fa1640cc84ba8fe.js",
@@ -85,7 +85,7 @@
       "static/chunks/main-af3068766efac2e7.js",
       "static/chunks/61-0a5281bb902a2a4d.js",
       "static/css/16d1fa6f10a7a110.css",
-      "static/chunks/pages/roadmaps-9badf01c6bb04a73.js"
+      "static/chunks/pages/roadmaps-ab746aa41cdca1af.js"
     ],
     "/videos": [
       "static/chunks/webpack-8fa1640cc84ba8fe.js",
@@ -93,7 +93,7 @@
       "static/chunks/main-af3068766efac2e7.js",
       "static/chunks/61-0a5281bb902a2a4d.js",
       "static/css/24a37a76f49ea1b2.css",
-      "static/chunks/pages/videos-f1b8fc4b69f5be1c.js"
+      "static/chunks/pages/videos-d17fb8b144ec9692.js"
     ]
   },
   "ampFirstPages": []

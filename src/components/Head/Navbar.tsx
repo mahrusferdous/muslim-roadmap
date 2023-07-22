@@ -46,7 +46,7 @@ const Navbar = () => {
             <Link href="/" className={styles.logo}>
                 <Image src="/islam.svg" alt="Muslim Roadmap Logo" width={logoWidth} height={logoHeight} />
             </Link>
-            <button style={{ width: "30px" }} onClick={toggleTheme}>
+            <button style={isSmallScreen ? { width: "30px" } : { width: "30px", left: "50px", position: "relative" }} onClick={toggleTheme}>
                 {isDarkMode ? sunEmoji : moonEmoji}
             </button>
             <div className={styles.navbarLinks}>
