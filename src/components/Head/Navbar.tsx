@@ -53,15 +53,19 @@ const Navbar = () => {
                 {isSmallScreen ? (
                     <div className={styles.navbarRight}>
                         <button
-                            style={{ borderColor: "transparent", backgroundColor: "white", borderRadius: "5px" }}
+                            style={
+                                isDarkMode
+                                    ? { borderColor: "transparent", backgroundColor: "black", borderRadius: "5px" }
+                                    : { borderColor: "transparent", backgroundColor: "white", borderRadius: "5px" }
+                            }
                             onClick={() => setIsOpen(!isOpen)}
                         >
-                            <div className={styles.hamburger}></div>
-                            <div className={styles.hamburger}></div>
-                            <div className={styles.hamburger}></div>
+                            <div className={isDarkMode ? styles.hamburgerDark : styles.hamburger}></div>
+                            <div className={isDarkMode ? styles.hamburgerDark : styles.hamburger}></div>
+                            <div className={isDarkMode ? styles.hamburgerDark : styles.hamburger}></div>
                         </button>
                         {isOpen && (
-                            <div className={styles.menu}>
+                            <div className={isDarkMode ? styles.menuDark : styles.menu}>
                                 <Link onClick={() => setIsOpen(!isOpen)} href="/roadmaps" passHref className={styles.navbarLink}>
                                     Roadmaps
                                 </Link>
@@ -71,7 +75,7 @@ const Navbar = () => {
                                 <Link onClick={() => setIsOpen(!isOpen)} href="/videos" passHref className={styles.navbarLink}>
                                     Videos
                                 </Link>
-                                <button className={styles.exitbtn} onClick={() => setIsOpen(!isOpen)}>
+                                <button className={isDarkMode ? styles.exitbtnDark : styles.exitbtn} onClick={() => setIsOpen(!isOpen)}>
                                     X
                                 </button>
                             </div>

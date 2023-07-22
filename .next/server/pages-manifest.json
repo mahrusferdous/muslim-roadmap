@@ -1,6 +1,14 @@
 {
+  "/baseroadmap": "pages/baseroadmap.html",
   "/_app": "pages/_app.js",
+  "/guides": "pages/guides.html",
+  "/iman": "pages/iman.html",
+  "/": "pages/index.html",
+  "/pillars": "pages/pillars.html",
+  "/prophets": "pages/prophets.html",
+  "/roadmaps": "pages/roadmaps.html",
+  "/videos": "pages/videos.html",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/roadmaps": "pages/roadmaps.js"
+  "/404": "pages/404.html"
 }
