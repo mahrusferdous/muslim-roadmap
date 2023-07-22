@@ -13,6 +13,8 @@ const Navbar = () => {
     const { isDarkMode, toggleTheme } = useContext(ThemeContext) as ThemeContextProps;
     const [logoWidth, setLogoWidth] = useState(100);
     const [logoHeight, setLogoHeight] = useState(80);
+    const [isSmallScreen, setIsSmallScreen] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
 
     useEffect(() => {
         const updateLogoSize = () => {
@@ -21,6 +23,7 @@ const Navbar = () => {
             const height = isSmallScreen ? 40 : 80;
             setLogoWidth(width);
             setLogoHeight(height);
+            setIsSmallScreen(isSmallScreen);
         };
 
         updateLogoSize();
@@ -43,21 +46,50 @@ const Navbar = () => {
             <Link href="/" className={styles.logo}>
                 <Image src="/islam.svg" alt="Muslim Roadmap Logo" width={logoWidth} height={logoHeight} />
             </Link>
+            <button style={{ width: "30px" }} onClick={toggleTheme}>
+                {isDarkMode ? sunEmoji : moonEmoji}
+            </button>
             <div className={styles.navbarLinks}>
-                <div className={styles.navbarRight}>
-                    <button style={{ width: "30px" }} onClick={toggleTheme}>
-                        {isDarkMode ? sunEmoji : moonEmoji}
-                    </button>
-                    <Link href="/roadmaps" passHref className={styles.navbarLink}>
-                        Roadmaps
-                    </Link>
-                    <Link href="/guides" passHref className={styles.navbarLink}>
-                        Guides
-                    </Link>
-                    <Link href="/videos" passHref className={styles.navbarLink}>
-                        Videos
-                    </Link>
-                </div>
+                {isSmallScreen ? (
+                    <div className={styles.navbarRight}>
+                        <button
+                            style={{ borderColor: "transparent", backgroundColor: "white", borderRadius: "5px" }}
+                            onClick={() => setIsOpen(!isOpen)}
+                        >
+                            <div className={styles.hamburger}></div>
+                            <div className={styles.hamburger}></div>
+                            <div className={styles.hamburger}></div>
+                        </button>
+                        {isOpen && (
+                            <div className={styles.menu}>
+                                <Link onClick={() => setIsOpen(!isOpen)} href="/roadmaps" passHref className={styles.navbarLink}>
+                                    Roadmaps
+                                </Link>
+                                <Link onClick={() => setIsOpen(!isOpen)} href="/guides" passHref className={styles.navbarLink}>
+                                    Guides
+                                </Link>
+                                <Link onClick={() => setIsOpen(!isOpen)} href="/videos" passHref className={styles.navbarLink}>
+                                    Videos
+                                </Link>
+                                <button className={styles.exitbtn} onClick={() => setIsOpen(!isOpen)}>
+                                    X
+                                </button>
+                            </div>
+                        )}
+                    </div>
+                ) : (
+                    <div className={styles.navbarRight}>
+                        <Link href="/roadmaps" passHref className={styles.navbarLink}>
+                            Roadmaps
+                        </Link>
+                        <Link href="/guides" passHref className={styles.navbarLink}>
+                            Guides
+                        </Link>
+                        <Link href="/videos" passHref className={styles.navbarLink}>
+                            Videos
+                        </Link>
+                    </div>
+                )}
             </div>
         </nav>
     );
