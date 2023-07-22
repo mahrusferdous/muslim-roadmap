@@ -4,7 +4,7 @@ import styles from "../../styles/Footer.module.css";
 const Footer = () => {
     return (
         <footer className={styles.footer}>
-            <a href="https://muslimroadmap.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/mahrusferdous/muslim-roadmap" target="_blank" rel="noopener noreferrer">
                 Powered by{" "}
                 <span className={styles.logo}>
                     <Image src="/islam.svg" alt="Muslim Roadmap Logo" width={19} height={18} />

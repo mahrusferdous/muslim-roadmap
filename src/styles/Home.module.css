@@ -43,7 +43,7 @@
 }
 
 .code {
-    background: #fafafa;
+    /* background: #7f7f7f; */
     border-radius: 5px;
     padding: 0.75rem;
     font-size: 1.1rem;
@@ -51,7 +51,7 @@
 }
 
 .al {
-    background: #fafafa;
+    /* background: #7f7f7f; */
     border-radius: 5px;
     padding: 0.3rem 0.75rem 0.3rem 0.75rem;
     font-size: 4rem;
@@ -77,6 +77,6 @@
 @media (prefers-color-scheme: dark) {
     .code,
     .al {
-        background: #7f7f7f;
+        background: rgba(128, 128, 128, 0.349);
     }
 }
