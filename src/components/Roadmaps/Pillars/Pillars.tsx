@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import ReactFlow, { ReactFlowProvider, Background, MiniMap } from "reactflow";
+import ReactFlow, { ReactFlowProvider, Background } from "reactflow";
 import PillarsComponent from "./PillarsComponent";
 import "reactflow/dist/style.css";
 import { initialNodes, initialEdges } from "../../../data/PillarData";
+import MiniMaps from "../../Context/MiniMaps";
 
 function DiagramComponent() {
     const [selectedNode, setSelectedNode] = useState<Object>(false);
@@ -12,14 +13,6 @@ function DiagramComponent() {
     };
 
     const isSidebarOpen = selectedNode !== false;
-
-    const minimapStyle: React.CSSProperties = {
-        height: 120,
-        backgroundColor: "transparent",
-        position: "absolute",
-        bottom: "10px",
-        left: "10px",
-    };
 
     return (
         <ReactFlowProvider>
@@ -38,7 +31,7 @@ function DiagramComponent() {
                 >
                     <Background color="#aaa" gap={40} style={{ pointerEvents: "none" }} />
                     <ReactFlow style={{ fontWeight: "bold" }} nodes={initialNodes} edges={initialEdges} onNodeClick={handleNodeClick} fitView />
-                    <MiniMap style={minimapStyle} zoomable pannable />
+                    <MiniMaps />
                 </div>
                 {isSidebarOpen && <PillarsComponent selectedNode={selectedNode} setSelectedNode={setSelectedNode} />}
             </div>
