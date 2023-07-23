@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import ReactFlow, { ReactFlowProvider, Background, MiniMap, Node } from "reactflow";
+import ReactFlow, { ReactFlowProvider, Background } from "reactflow";
 import ImanComponent from "./ImanComponent";
 import { initialNodes, initialEdges } from "../../../data/ImanData";
+import MiniMaps from "../../Context/MiniMaps";
 import "reactflow/dist/style.css";
 
 function Iman() {
@@ -12,14 +13,6 @@ function Iman() {
     };
 
     const isSidebarOpen = selectedNode !== false;
-
-    const minimapStyle: React.CSSProperties = {
-        height: 120,
-        backgroundColor: "transparent",
-        position: "absolute",
-        bottom: "10px",
-        left: "10px",
-    };
 
     return (
         <ReactFlowProvider>
@@ -38,7 +31,7 @@ function Iman() {
                 >
                     <Background color="#aaa" gap={40} style={{ pointerEvents: "none" }} />
                     <ReactFlow style={{ fontWeight: "bold" }} nodes={initialNodes} edges={initialEdges} onNodeClick={handleNodeClick} fitView />
-                    <MiniMap style={minimapStyle} zoomable pannable />
+                    <MiniMaps />
                 </div>
                 {isSidebarOpen && <ImanComponent selectedNode={selectedNode} setSelectedNode={setSelectedNode} />}
             </div>

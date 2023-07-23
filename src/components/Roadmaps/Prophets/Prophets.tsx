@@ -1,16 +1,10 @@
 import React from "react";
-import ReactFlow, { ReactFlowProvider, Background, MiniMap } from "reactflow";
+import ReactFlow, { ReactFlowProvider, Background } from "reactflow";
 import "reactflow/dist/style.css";
 import { initialNodes, initialEdges } from "../../../data/ProphetData";
+import MiniMaps from "../../Context/MiniMaps";
 
 const Prophets = () => {
-    const minimapStyle: React.CSSProperties = {
-        height: 120,
-        backgroundColor: "transparent",
-        position: "absolute",
-        bottom: "10px",
-        left: "10px",
-    };
     return (
         <ReactFlowProvider>
             <div
@@ -27,7 +21,7 @@ const Prophets = () => {
                 >
                     <Background color="#aaa" gap={40} style={{ pointerEvents: "none" }} />
                     <ReactFlow style={{ fontWeight: "bold" }} nodes={initialNodes} edges={initialEdges} fitView />
-                    <MiniMap style={minimapStyle} zoomable pannable />
+                    <MiniMaps />
                 </div>
             </div>
         </ReactFlowProvider>
