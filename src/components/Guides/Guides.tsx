@@ -4,6 +4,14 @@ import GuideNode from "./GuideNode";
 const Guides = () => {
     return (
         <div className={styles.main}>
+            <h1>Book</h1>
+            <GuideNode
+                site={"https://theclearquran.org/"}
+                name={"The Clear Quran"}
+                paragraph={`
+"The Clear Quran" offers modern and accurate English translations of the Quranic text.`}
+            />
+            <h1>Online Resources</h1>
             <div className={styles.grid}>
                 <GuideNode site={"https://quran.com/"} name={"Quran"} paragraph={"This website provides Quran in various different language."} />
                 <GuideNode
