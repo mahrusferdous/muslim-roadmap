@@ -7,9 +7,22 @@
 
 .cardMain a {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-grow: 1;
+    padding: 10px;
+}
+
+.cardMain div {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.cardMain div a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .largeCard {
