@@ -81,8 +81,8 @@
 }
 
 .hamburger {
-    width: 35px;
-    height: 5px;
+    width: 28px;
+    height: 3px;
     background-color: black;
     margin: 6px 0;
     border-color: transparent;
@@ -90,8 +90,8 @@
 }
 
 .hamburgerDark {
-    width: 35px;
-    height: 5px;
+    width: 28px;
+    height: 3px;
     background-color: white;
     margin: 6px 0;
     border-color: transparent;
