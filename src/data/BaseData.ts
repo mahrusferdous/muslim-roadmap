@@ -1,9 +1,14 @@
 import { Position } from "reactflow";
-import { MuslimNode, CustomNode } from "../components/Roadmaps/BaseRoadmap/BaseNodes";
+import { MuslimNode, CustomNode, TopNode, BottomNode, MiddleNode, RightNode, LeftNode } from "../components/Roadmaps/BaseRoadmap/BaseNodes";
 
 const nodeTypes = {
     muslimNode: MuslimNode,
     customNode: CustomNode,
+    topNode: TopNode,
+    bottomNode: BottomNode,
+    middleNode: MiddleNode,
+    rightNode: RightNode,
+    leftNode: LeftNode,
 };
 
 // interface Node {
@@ -27,11 +32,12 @@ interface Edge {
 const initialNodes: any = [
     {
         id: "1",
-        type: "input",
+        type: "topNode",
         position: { x: 550, y: 50 },
         data: {
             label: "Islam",
         },
+        sourcePosition: Position.Bottom,
     },
     {
         id: "2",
@@ -59,6 +65,7 @@ const initialNodes: any = [
     },
     {
         id: "5",
+        type: "middleNode",
         position: { x: 550, y: 450 },
         data: {
             label: "Quran",
@@ -66,7 +73,7 @@ const initialNodes: any = [
     },
     {
         id: "6",
-        type: "output",
+        type: "bottomNode",
         position: { x: 450, y: 550 },
         data: {
             label: "Muhammad",
@@ -76,105 +83,94 @@ const initialNodes: any = [
     //Pillars
     {
         id: "7",
-        type: "output",
+        type: "rightNode",
         position: { x: 0, y: 100 },
         data: {
             label: "Shahada",
         },
-        targetPosition: Position.Right,
     },
     {
         id: "8",
-        type: "output",
+        type: "rightNode",
         position: { x: 0, y: 190 },
         data: {
             label: "Salah",
         },
-        targetPosition: Position.Right,
     },
     {
         id: "9",
-        type: "output",
+        type: "rightNode",
         position: { x: 0, y: 280 },
         data: {
             label: "Zakat",
         },
-        targetPosition: Position.Right,
     },
     {
         id: "10",
-        type: "output",
+        type: "rightNode",
         position: { x: 0, y: 370 },
         data: {
             label: "Sawm",
         },
-        targetPosition: Position.Right,
     },
     {
         id: "11",
-        type: "output",
+        type: "rightNode",
         position: { x: 0, y: 450 },
         data: {
             label: "Hajj",
         },
-        targetPosition: Position.Right,
     },
 
     //Iman
     {
         id: "12",
-        type: "output",
+        type: "leftNode",
         position: { x: 1000, y: 75 },
         data: {
             label: "Belief in Allah",
         },
-        targetPosition: Position.Left,
     },
     {
         id: "13",
-        type: "output",
+        type: "leftNode",
         position: { x: 1000, y: 150 },
         data: {
             label: "Belief in Angels",
         },
-        targetPosition: Position.Left,
     },
     {
         id: "14",
-        type: "output",
+        type: "leftNode",
         position: { x: 1000, y: 225 },
 
         data: {
             label: "Belief in the Divine Books",
         },
-        targetPosition: Position.Left,
     },
     {
         id: "15",
-        type: "output",
+        type: "leftNode",
         position: { x: 1000, y: 300 },
         data: {
             label: "Belief in the Prophets",
         },
-        targetPosition: Position.Left,
     },
     {
         id: "16",
-        type: "output",
+        type: "leftNode",
         position: { x: 1000, y: 375 },
         data: {
             label: "Belief in the Day of Judgement",
         },
-        targetPosition: Position.Left,
     },
     {
         id: "17",
-        type: "output",
+        type: "leftNode",
         position: { x: 1000, y: 450 },
         data: {
             label: "Belief in Qadr",
         },
-        targetPosition: Position.Left,
     },
 ];
 const initialEdges: Edge[] = [

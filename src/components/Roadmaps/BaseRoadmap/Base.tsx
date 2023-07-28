@@ -1,5 +1,5 @@
-import React, { useCallback, useState, useEffect } from "react";
-import ReactFlow, { MiniMap, Background, useNodesState, useEdgesState, addEdge, ReactFlowProvider, Connection, Edge } from "reactflow";
+import React, { useCallback } from "react";
+import ReactFlow, { Background, useNodesState, useEdgesState, addEdge, ReactFlowProvider, Connection, Edge } from "reactflow";
 import { initialNodes, initialEdges, nodeTypes } from "../../../data/BaseData";
 import MiniMaps from "../../Context/MiniMaps";
 import "reactflow/dist/style.css";
@@ -25,6 +25,7 @@ const BaseComponentData: React.FC = () => {
                 >
                     <Background color="#aaa" gap={40} style={{ pointerEvents: "none" }} />
                     <ReactFlow
+                        style={{ fontWeight: "bold" }}
                         nodes={nodes}
                         edges={edges}
                         onNodesChange={onNodesChange}
