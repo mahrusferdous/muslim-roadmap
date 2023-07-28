@@ -64,6 +64,7 @@
     height: 100vh;
     padding-top: 50px;
     color: black;
+    z-index: 10;
 }
 
 .menuDark {
@@ -78,6 +79,7 @@
     height: 100vh;
     padding-top: 50px;
     color: white;
+    z-index: 10;
 }
 
 .hamburger {
