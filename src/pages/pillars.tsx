@@ -8,7 +8,7 @@ const PillarsPage = () => {
     return (
         <div className={styles.container}>
             <Navbar />
-            <Pillars />;
+            <Pillars />
             <Footer />
         </div>
     );
