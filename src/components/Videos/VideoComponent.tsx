@@ -3,8 +3,8 @@ import styles from "../../styles/Video.module.css";
 const VideoComponent = () => {
     return (
         <div>
-            <h1>Important Videos</h1>
             <div className={styles.cardMain}>
+                <h1>Important Videos</h1>
                 <div>
                     <a
                         href="https://www.youtube.com/watch?v=cEPv5hPYy5A&t=38s"
@@ -32,8 +32,9 @@ const VideoComponent = () => {
                     <p>Descriptive video on how to pray.</p>
                 </a>
             </div>
-            <h1>Important Channels</h1>
+
             <div className={styles.cardMain}>
+                <h1>Important Channels</h1>
                 <a href="https://www.youtube.com/@OneMessageFoundation" className={styles.largeCard} target="_blank" rel="noopener noreferrer">
                     <h2>One Message Foundation</h2>
                     <p>Delivering insightful da&apos;wah.</p>
