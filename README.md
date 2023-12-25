@@ -2,6 +2,8 @@
 
 Welcome to Muslim Roadmap, a website that provides guidance to people who are looking to learn about Islam or become better Muslims. This website provides authentic references along with the exact citing of the information on special pages and lines.
 
+[Muslim roadmap link](https://muslimroadmap.com/)
+
 ## Getting started
 
 To get started with this project, you will need to have Node.js and npm installed on your system. You can download and install Node.js from the official website at https://nodejs.org.
