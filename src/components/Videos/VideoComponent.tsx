@@ -2,22 +2,14 @@ import styles from "../../styles/Video.module.css";
 
 const VideoComponent = () => {
     return (
-        <div>
+        <div className={styles.main}>
             <div className={styles.cardMain}>
                 <h1>Important Videos</h1>
-                <div>
-                    <a
-                        href="https://www.youtube.com/watch?v=cEPv5hPYy5A&t=38s"
-                        className={styles.largeCard}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <h2>The Clear Quran Part 1</h2>
-                    </a>
-                    <a href="https://www.youtube.com/watch?v=Xsasd29N4qA" className={styles.largeCard} target="_blank" rel="noopener noreferrer">
-                        <h2>The Clear Quran Part 2</h2>
-                    </a>
-                </div>
+
+                <a href="https://www.youtube.com/watch?v=KQfWRr-xDXQ&list=PL7atYSa5SSm6A_cBzp3Lqyw-aEOdQw6Wn" className={styles.largeCard} target="_blank" rel="noopener noreferrer">
+                    <h2>Quran Recitation</h2>
+                    <p>Beautiful recitation of the Quran. (Playlist)</p>
+                </a>
 
                 <a href="https://www.youtube.com/watch?v=VguyeTH76C0" className={styles.largeCard} target="_blank" rel="noopener noreferrer">
                     <h2>Power of Iman</h2>

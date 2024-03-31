@@ -1,8 +1,13 @@
+.main {
+    margin-bottom: 5rem;
+}
+
 .cardMain {
     display: flex;
     flex: 1;
     padding: 2rem 0;
     flex-direction: column;
+
 }
 
 .cardMain a {
@@ -33,6 +38,7 @@
     border-radius: 10px;
     transition: color 0.15s ease, border-color 0.15s ease;
     max-width: 100%;
+    margin: .5rem;
 }
 
 .largeCard h2 {
