@@ -8,8 +8,7 @@ const Guides = () => {
             <GuideNode
                 site={"https://theclearquran.org/"}
                 name={"The Clear Quran"}
-                paragraph={`
-"The Clear Quran" offers modern and accurate English translations of the Quranic text.`}
+                paragraph={`"The Clear Quran" offers modern and accurate English translations.`}
             />
             <h1>Online Resources</h1>
             <div className={styles.grid}>
