@@ -22,6 +22,9 @@ const DiagramNode: React.FC = () => {
                     <Link href="/prophets" className={styles.card}>
                         <h2>Prophets</h2>
                     </Link>
+                    <Link href="/demo" className={styles.card}>
+                        <h2>Demo</h2>
+                    </Link>
                 </div>
             </div>
         </div>

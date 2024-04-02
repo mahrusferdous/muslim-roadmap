@@ -30,10 +30,21 @@ function DiagramComponent() {
                     }}
                 >
                     <Background color="#aaa" gap={40} style={{ pointerEvents: "none" }} />
-                    <ReactFlow style={{ fontWeight: "bold" }} nodes={initialNodes} edges={initialEdges} onNodeClick={handleNodeClick} fitView />
+                    <ReactFlow
+                        style={{ fontWeight: "bold" }}
+                        nodes={initialNodes}
+                        edges={initialEdges}
+                        onNodeClick={handleNodeClick}
+                        fitView
+                    />
                     <MiniMaps />
                 </div>
-                {isSidebarOpen && <PillarsComponent selectedNode={selectedNode} setSelectedNode={setSelectedNode} />}
+                {isSidebarOpen && (
+                    <PillarsComponent
+                        selectedNode={selectedNode}
+                        setSelectedNode={setSelectedNode}
+                    />
+                )}
             </div>
         </ReactFlowProvider>
     );
